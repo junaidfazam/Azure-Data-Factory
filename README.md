@@ -45,7 +45,7 @@ This pipeline supports:
 
 ---
 
-## 7. Future Enhancements
+## 🚧 Future Enhancements
 
 - Add automated alerts to monitor pipeline failures.
 - Implement data validation post-ingestion and transformation.
