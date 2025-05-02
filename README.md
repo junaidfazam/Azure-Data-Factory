@@ -45,9 +45,11 @@ This pipeline supports:
 
 ---
 
-## 🗺 Architecture Diagram
+## 7. Future Enhancements
 
-![ADF Architecture Diagram](./adf_architecture_diagram.png)
+- Add automated alerts to monitor pipeline failures.
+- Implement data validation post-ingestion and transformation.
+- Integrate CI/CD pipelines to deploy and manage ADF pipelines.
 
 ---
 
