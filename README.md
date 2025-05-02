@@ -1,74 +1,53 @@
-# Project Requirement: Azure Data Factory Pipeline for COVID-19 Analytics
+# 📊 Project Summary: Azure Data Factory Pipeline for COVID-19 Data Integration
 
-## Objective
-Design and implement a scalable data pipeline using Azure Data Factory to ingest, transform, and store COVID-19-related data to support BI reporting and AI/ML analytics.
-
----
-
-## 1. Ingestion Sources
-
-### From GitHub
-- `cases_deaths.csv`
-- `country_response.csv`
-- `hospital_admissions.csv`
-- `testing.csv`
-
-### From Azure Blob Storage
-- `population_data.csv`
-
-> All ingested data is stored in **Azure Data Lake Storage Gen2 (Raw Layer)**.
+This project showcases a complete **data integration pipeline** built using **Azure Data Factory**, designed to ingest, transform, and store COVID-19 and population-related datasets from multiple sources for **BI reporting** and **AI/ML analysis**.
 
 ---
 
-## 2. Transformation Process
+## ✅ Key Features
 
-### A. Azure Data Factory – Data Flow Outputs
-- `cases_deaths` – Cleaned and structured
-- `hospital_admissions_weekly` – Aggregated weekly data
-- `hospital_admissions_daily` – Cleaned daily-level data
+- **Multi-source ingestion** from:
+  - Public **GitHub repositories**:
+    - `cases_deaths.csv`
+    - `country_response.csv`
+    - `hospital_admissions.csv`
+    - `testing.csv`
+  - **Azure Blob Storage**:
+    - `population_data.csv`
 
-### B. Azure Databricks – Notebook Outputs
-- `population_data` – Transformed demographic and regional insights
-- `testing_data` – Enriched metrics including positivity rates and capacity
+- **Data transformation** using:
+  - **Azure Data Flows** (structured transformation for cases and hospital data)
+  - **Azure Databricks** (advanced transformations for population and testing data)
 
----
-
-## 3. Storage Targets
-
-- **Azure SQL Database**
-  - For BI dashboards and reporting (e.g., Power BI)
-  
-- **Azure Data Lake Storage Gen2 (Processed Layer)**
-  - For AI/ML modeling and analytics
+- **Data storage** in:
+  - **Azure Data Lake Gen2** – Processed data for AI/ML
+  - **Azure SQL Database** – Cleaned and aggregated data for BI reporting
 
 ---
 
-## 4. Tools and Services
+## 🛠 Tools & Technologies
 
 - Azure Data Factory (Pipelines, Data Flows)
-- Azure Databricks (Notebook-based transformations)
-- Azure Data Lake Storage Gen2
+- Azure Databricks (Python Notebooks)
+- Azure Blob Storage
 - Azure SQL Database
-- GitHub (as source)
-- Azure Blob Storage (as source)
+- Azure Data Lake Storage Gen2
+- GitHub
 
 ---
 
-## Architecture Flow
+## 💼 Use Case
 
-```text
-Ingestion:
-  GitHub / Blob Storage
-         ↓
-Azure Data Factory Pipelines
-         ↓
-    ADLS Gen2 (Raw)
+This pipeline supports:
 
-Transformation:
-  - ADF Data Flows: cases, hospital admissions
-  - Databricks: population, testing
-         ↓
+- **Business Intelligence Dashboards** (via Power BI using Azure SQL)
+- **Machine Learning Model Training** (using curated datasets in Azure Data Lake)
 
-Storage:
-  - ADLS Gen2 (Processed) → AI/ML
-  - Azure SQL Database → BI/Reporting
+---
+
+## 🗺 Architecture Diagram
+
+![ADF Architecture Diagram](./adf_architecture_diagram.png)
+
+---
+
