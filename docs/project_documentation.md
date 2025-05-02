@@ -44,8 +44,8 @@
 
     ## 5. Triggers and Automation
 
-    - **Ingestion Trigger**: Automatically triggers the ingestion pipeline when new data is available.
-    - **Transformation Trigger**: Starts the data transformation flows based on defined schedules or external triggers.
+    - **Ingestion Trigger**: Automatically triggers the ingestion pipeline when file is available.
+    - **Transformation Trigger**: Starts the data transformation flows based on previous triggers.
     - **Schedule Trigger**: Runs pipelines on a scheduled basis (e.g., daily, weekly).
 
     ---
