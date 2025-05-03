@@ -27,5 +27,5 @@ An Azure SSIS Integration Runtime is used to lift and shift or execute SQL Serve
 ### 9. What is the purpose of Triggers in ADF?  
 Triggers are used to execute ADF pipelines automatically based on a defined schedule, event, or tumbling window. They eliminate the need for manual pipeline execution.
 
-##3 10. Name the three types of Triggers discussed.  
+### 10. Name the three types of Triggers discussed.  
 The three types of triggers are Event Trigger, Tumbling Window Trigger, and Schedule Trigger.
