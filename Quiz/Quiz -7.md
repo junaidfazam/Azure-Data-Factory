@@ -1,4 +1,4 @@
-<h1 align="center">Azure Data Factory (ADF) Quiz - 5</h1>
+<h1 align="center">Azure Data Factory (ADF) Quiz - 7</h1>
 
 ### 1. Describe two ways to send email notifications on Azure Data Factory pipeline failures.  
 Two ways to send email notifications on Azure Data Factory pipeline failures are using Alerts and Metrics directly within ADF and integrating with Azure Logic Apps via Web or Webhook activities.
