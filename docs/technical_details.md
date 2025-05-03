@@ -18,24 +18,33 @@
 
 #### Ingestion Requirement
 
- -Population Data
-  - Input format      : [Specify format]
-  - Input location    : [Specify location]
-  - Output format     : [Specify format]
-  - Output location   : [Specify location]
-  - Ingestion Condition: Only if file has 100 rows
-  - Ingestion         : As soon as file arrives
-  - Trigger           : [Specify if using ADF trigger]
-  - Post-process      : Delete the file after ingestion
+  - Population Data
+    - format
+      - Input  : zip
+      - Output : tsv
+    - location
+      - Input location    : blob/population
+      - Output location   : raw/population
+    - Ingestion Condition: Only if file has 100 rows
+    - Ingestion Frequency        : As soon as file arrives
+    - Post-process      : Delete the file after ingestion
 
-    - Covid-19 Data
+  - Covid-19 Data
+    - format
+      - Input  : csv
+      - Output : csv
+    - location
+      - Input location    : raw/ecdc
+      - Output location   : raw/ecdc
+    -  Ingestion Condition: Read the config/list to get the file to be ingested
+    - Schedule          : Daily at midnight
+
+  - Json File configuration
     - Config Location   : blob config
     - JSON Config File contains:
-      - Base URL
-       - Relative URL
-       - File name
-    - Schedule          : Daily at midnight
-    - Output format     : [Specify format]
+     - Base URL
+     - Relative URL
+     - File name
 
 #### Transformation Requirement
 
@@ -45,5 +54,5 @@
    - cases_and_deaths
    - hospital_admissions_daily
    - testing
-- Trigger: [Specify trigger mechanism]
+
 
